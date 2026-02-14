@@ -22,7 +22,7 @@ function formatTime(ms) {
     seconds = seconds < 10 ? "0" + seconds : seconds;
     milliseconds = milliseconds < 10 ? "0" + milliseconds : milliseconds;
 
-    return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+    return `${minutes}:${seconds}:${milliseconds}`;
 }
 
 function updateDisplay() {
