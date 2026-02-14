@@ -2,7 +2,7 @@ let startTime = 0;
 let elapsedTime = 0;
 let timer = null;
 
-// Get elements
+
 const display = document.getElementById("headings");
 const startBtn = document.getElementById("start");
 const stopBtn = document.getElementById("stop");
@@ -10,7 +10,7 @@ const lapBtn = document.getElementById("lap");
 const resetBtn = document.getElementById("reset");
 const lapsList = document.getElementById("laps");
 
-// Format time
+
 function formatTime(ms) {
     let hours = Math.floor(ms / 3600000);
     let minutes = Math.floor((ms % 3600000) / 60000);
@@ -25,12 +25,11 @@ function formatTime(ms) {
     return `${hours}:${minutes}:${seconds}:${milliseconds}`;
 }
 
-// Update display
 function updateDisplay() {
     display.innerText = formatTime(elapsedTime);
 }
 
-// Start
+
 function startTimer() {
     if (timer !== null) return;
 
@@ -47,7 +46,7 @@ function startTimer() {
     resetBtn.style.display = "none";
 }
 
-// Stop
+
 function stopTimer() {
     clearInterval(timer);
     timer = null;
@@ -58,7 +57,7 @@ function stopTimer() {
     resetBtn.style.display = "inline-block";
 }
 
-// Reset
+
 function resetTimer() {
     clearInterval(timer);
     timer = null;

@@ -12,7 +12,8 @@ body {
     text-align: center;
     color: rgb(136, 130, 136);
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-size: 100px;}
+font-size: 100px;
+font-size: clamp(40px, 12vw, 100px);}
 
 #btns {
     padding-top: 3%;
@@ -20,6 +21,9 @@ font-size: 100px;}
    border-color: rgb(166, 115, 166);
 font-family: Arial, Helvetica, sans-serif;
 font-size: 100px;
+ display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 button {
@@ -48,3 +52,18 @@ button:hover {
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: 20px;
 }
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+    button {
+        width: 80%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    #laps {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
